@@ -69,6 +69,7 @@ func initializeThread(apiKey string) (string, error) {
 		log.Println("Error making API request to initialize thread:", err)
 		return "", err
 	}
+
 	defer resp.Body.Close()
 
 	responseBytes, err := ioutil.ReadAll(resp.Body)
