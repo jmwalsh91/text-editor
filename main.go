@@ -67,7 +67,7 @@ func initializeThread(apiKey string) (string, error) {
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		log.Println("Error making API request to initialize thread:", err)
-		return "a", err
+		return "as", err
 	}
 
 	defer resp.Body.Close()
